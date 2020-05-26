@@ -1,6 +1,6 @@
 #!/bin/bash
-# Install Jenkins and Requirements
-# (run as root or sudo ./install.sh
+# Install Jenkins and Requirements - Tested for Latest Jenkins v2.222.3
+# (run as root or sudo ./install.sh)
 
 # update dnf before installing packages
 dnf -y update
