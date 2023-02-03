@@ -1,5 +1,7 @@
 #!/bin/bash
-# Install Jenkins and Requirements - Tested for Latest Jenkins v2.222.3
+  #Author:Esther
+  #Date:January 2023
+## Install Jenkins and Requirements - Tested for Latest Jenkins v2.222.3
 # (run as root or sudo ./install.sh)
 
 # update dnf before installing packages
@@ -13,7 +15,7 @@ dnf -y install java-1.8.0-openjdk-devel
 export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk"
 installed=$( cat /root/.bash_profile | grep -c JAVA_HOME )
 if [ $installed -eq 0 ]; then
-        echo "JAVA_HOME=\"/usr/lib/jvm/java-1.8.0-openjdk\"" >> /root/.bash_profile
+echo "JAVA_HOME=\"/usr/lib/jvm/java-1.8.0-openjdk\"" >> /root/.bash_profile
 fi
 
 # enable the Jenkins repo and import GPG key
@@ -61,3 +63,4 @@ sleep 3
 
 echo "http://<ip>/ -- Administrator Password:"
 cat /var/lib/jenkins/secrets/initialAdminPassword
+echo Jenkins install successfully!
